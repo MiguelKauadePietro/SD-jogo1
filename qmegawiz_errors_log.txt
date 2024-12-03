@@ -1,0 +1,10 @@
+
+
+C:/Users/831397/Desktop/hashgame/video_PLL.vhd
+
+Nov 28 10AM:34:20>: Error in CNX file format.
+
+Error messages are listed in file
+C:/Users/831397/Desktop/hashgame/video_PLL.cnxerr.
+
+Can't create the custom megafunction variation file(s)

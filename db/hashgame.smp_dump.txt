@@ -1,0 +1,8 @@
+
+State Machine - |hashgame_block|hashgame:inst|curr_state
+Name curr_state.p2win curr_state.p1win curr_state.ongoing curr_state.beginning curr_state.draw_state 
+curr_state.beginning 0 0 0 0 0 
+curr_state.ongoing 0 0 1 1 0 
+curr_state.p1win 0 1 0 1 0 
+curr_state.p2win 1 0 0 1 0 
+curr_state.draw_state 0 0 0 1 1 
