@@ -46,14 +46,7 @@ set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name EDA_SIMULATION_TOOL "Questa Intel FPGA (Verilog)"
-set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
-set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_location_assignment PIN_AA16 -to CLOCK2_50
 set_location_assignment PIN_Y26 -to CLOCK3_50
 set_location_assignment PIN_K14 -to CLOCK4_50
@@ -223,51 +216,9 @@ set_location_assignment PIN_Y23 -to FPGA_I2C_SDAT
 set_location_assignment PIN_W20 -to IRDA_RXD
 set_location_assignment PIN_W21 -to IRDA_TXD
 set_global_assignment -name BDF_FILE hashgame_block.bdf
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE ../../../Desktop/vga_display.v
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[8]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to position[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to position[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to position[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to player
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to game_over
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to draw
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[15]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to leds
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to win2
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to win1
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to position[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to position
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[17]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[16]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[14]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[13]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[12]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[11]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[10]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[9]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[8]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[6]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[5]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[4]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[3]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board[2]
-set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to board
-set_global_assignment -name VERILOG_FILE ../../../Desktop/vga_display.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

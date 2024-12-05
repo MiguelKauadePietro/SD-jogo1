@@ -63,6 +63,7 @@ always @(*) begin
         beginning: next_state = ongoing;
 
         ongoing: begin
+			
             if (check_win(board_reg, 2'b01))
                 next_state = p1win;
             else if (check_win(board_reg, 2'b10))

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hashgame
-Tue Dec  3 10:48:47 2024
+Thu Dec  5 11:30:40 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -10,16 +10,20 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. State Machine - |hashgame_block|hashgame:inst|curr_state
-  6. Registers Removed During Synthesis
-  7. Multiplexer Restructuring Statistics (Restructuring Performed)
-  8. Parameter Settings for User Entity Instance: VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component
-  9. Parameter Settings for User Entity Instance: vga_display:inst4
- 10. Parameter Settings for User Entity Instance: hashgame:inst
- 11. altpll Parameter Settings by Entity Instance
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |hashgame_block|hashgame:inst|curr_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component
+ 13. Parameter Settings for User Entity Instance: vga_display:inst4
+ 14. Parameter Settings for User Entity Instance: hashgame:inst
+ 15. altpll Parameter Settings by Entity Instance
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -46,23 +50,23 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Dec  3 10:48:47 2024          ;
+; Analysis & Synthesis Status     ; Successful - Thu Dec  5 11:30:40 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; hashgame                                       ;
 ; Top-level Entity Name           ; hashgame_block                                 ;
 ; Family                          ; Cyclone V                                      ;
-; Logic utilization (in ALMs)     ; N/A until Partition Merge                      ;
-; Total registers                 ; N/A until Partition Merge                      ;
-; Total pins                      ; N/A until Partition Merge                      ;
-; Total virtual pins              ; N/A until Partition Merge                      ;
-; Total block memory bits         ; N/A until Partition Merge                      ;
-; Total DSP Blocks                ; N/A until Partition Merge                      ;
-; Total HSSI RX PCSs              ; N/A until Partition Merge                      ;
-; Total HSSI PMA RX Deserializers ; N/A until Partition Merge                      ;
-; Total HSSI TX PCSs              ; N/A until Partition Merge                      ;
-; Total HSSI PMA TX Serializers   ; N/A until Partition Merge                      ;
-; Total PLLs                      ; N/A until Partition Merge                      ;
-; Total DLLs                      ; N/A until Partition Merge                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 76                                             ;
+; Total pins                      ; 27                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 0                                              ;
+; Total DSP Blocks                ; 0                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 1                                              ;
+; Total DLLs                      ; 0                                              ;
 +---------------------------------+------------------------------------------------+
 
 
@@ -170,6 +174,71 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; hashgame_block.bdf               ; yes             ; User Block Diagram/Schematic File  ; C:/Users/831397/Desktop/SD-jogo1/hashgame_block.bdf                    ;         ;
+; vga_sync.vhd                     ; yes             ; Auto-Found VHDL File               ; C:/Users/831397/Desktop/SD-jogo1/vga_sync.vhd                          ;         ;
+; video_pll.vhd                    ; yes             ; Auto-Found Wizard-Generated File   ; C:/Users/831397/Desktop/SD-jogo1/video_pll.vhd                         ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/altpll.tdf        ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                       ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/aglobal231.inc    ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                       ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                       ; c:/intelfpga/23.1std/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
+; db/altpll_80u.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/831397/Desktop/SD-jogo1/db/altpll_80u.tdf                     ;         ;
+; vga_display.v                    ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/831397/Desktop/SD-jogo1/vga_display.v                         ;         ;
+; hashgame.v                       ; yes             ; Auto-Found Verilog HDL File        ; C:/Users/831397/Desktop/SD-jogo1/hashgame.v                            ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                                                    ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                            ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 77                                                                                               ;
+;                                             ;                                                                                                  ;
+; Combinational ALUT usage for logic          ; 119                                                                                              ;
+;     -- 7 input functions                    ; 2                                                                                                ;
+;     -- 6 input functions                    ; 29                                                                                               ;
+;     -- 5 input functions                    ; 15                                                                                               ;
+;     -- 4 input functions                    ; 18                                                                                               ;
+;     -- <=3 input functions                  ; 55                                                                                               ;
+;                                             ;                                                                                                  ;
+; Dedicated logic registers                   ; 76                                                                                               ;
+;                                             ;                                                                                                  ;
+; I/O pins                                    ; 27                                                                                               ;
+;                                             ;                                                                                                  ;
+; Total DSP Blocks                            ; 0                                                                                                ;
+;                                             ;                                                                                                  ;
+; Total PLLs                                  ; 1                                                                                                ;
+;     -- PLLs                                 ; 1                                                                                                ;
+;                                             ;                                                                                                  ;
+; Maximum fan-out node                        ; VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_80u:auto_generated|clk[0] ;
+; Maximum fan-out                             ; 44                                                                                               ;
+; Total fan-out                               ; 740                                                                                              ;
+; Average fan-out                             ; 2.96                                                                                             ;
++---------------------------------------------+--------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Entity Name    ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+----------------+--------------+
+; |hashgame_block                         ; 119 (0)             ; 76 (0)                    ; 0                 ; 0          ; 27   ; 0            ; |hashgame_block                                                                                           ; hashgame_block ; work         ;
+;    |VGA_SYNC:inst3|                     ; 40 (40)             ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |hashgame_block|VGA_SYNC:inst3                                                                            ; VGA_SYNC       ; work         ;
+;       |video_PLL:video_PLL_inst|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hashgame_block|VGA_SYNC:inst3|video_PLL:video_PLL_inst                                                   ; video_PLL      ; work         ;
+;          |altpll:altpll_component|      ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hashgame_block|VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component                           ; altpll         ; work         ;
+;             |altpll_80u:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hashgame_block|VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_80u:auto_generated ; altpll_80u     ; work         ;
+;    |hashgame:inst|                      ; 63 (63)             ; 34 (34)                   ; 0                 ; 0          ; 0    ; 0            ; |hashgame_block|hashgame:inst                                                                             ; hashgame       ; work         ;
+;    |vga_display:inst4|                  ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |hashgame_block|vga_display:inst4                                                                         ; vga_display    ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |hashgame_block|hashgame:inst|curr_state                                                                        ;
@@ -190,12 +259,27 @@ Encoding Type:  One-Hot
 ; Register name                         ; Reason for Removal                     ;
 +---------------------------------------+----------------------------------------+
 ; VGA_SYNC:inst3|green_out              ; Stuck at GND due to stuck port data_in ;
-; VGA_SYNC:inst3|pixel_column[0..4]     ; Lost fanout                            ;
+; VGA_SYNC:inst3|pixel_row[0..4]        ; Lost fanout                            ;
 ; VGA_SYNC:inst3|pixel_row[9]           ; Stuck at GND due to stuck port data_in ;
 ; hashgame:inst|curr_state~4            ; Lost fanout                            ;
 ; hashgame:inst|curr_state~5            ; Lost fanout                            ;
 ; Total Number of Removed Registers = 9 ;                                        ;
 +---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 76    ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 54    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -204,7 +288,7 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |hashgame_block|VGA_SYNC:inst3|v_count[2] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |hashgame_block|hashgame:inst|next_state  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |hashgame_block|hashgame:inst|next_state  ;
 ; 16:1               ; 2 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; No         ; |hashgame_block|vga_display:inst4|Mux1    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
@@ -633,31 +717,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 74                          ;
-;     CLR               ; 2                           ;
+; arriav_ff             ; 76                          ;
+;     CLR               ; 4                           ;
 ;     ENA               ; 14                          ;
 ;     ENA CLR           ; 30                          ;
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 8                           ;
-; arriav_lcell_comb     ; 123                         ;
+; arriav_lcell_comb     ; 121                         ;
 ;     arith             ; 20                          ;
 ;         1 data inputs ; 20                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 100                         ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 99                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 11                          ;
+;         1 data inputs ; 10                          ;
 ;         2 data inputs ; 17                          ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 27                          ;
-;         5 data inputs ; 13                          ;
-;         6 data inputs ; 24                          ;
-; boundary_port         ; 25                          ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 18                          ;
+;         5 data inputs ; 15                          ;
+;         6 data inputs ; 29                          ;
+; boundary_port         ; 27                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.85                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -676,26 +760,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Dec  3 10:48:39 2024
+    Info: Processing started: Thu Dec  5 11:30:32 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hashgame -c hashgame
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file hashgame_block.bdf
     Info (12023): Found entity 1: hashgame_block
-Info (12021): Found 1 design units, including 1 entities, in source file /users/811164/desktop/vga_display.v
-    Info (12023): Found entity 1: vga_display File: C:/Users/811164/Desktop/vga_display.v Line: 1
+Warning (12019): Can't analyze file -- file ../../../Desktop/vga_display.v is missing
 Info (12127): Elaborating entity "hashgame_block" for the top level hierarchy
 Warning (12125): Using design file vga_sync.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/831397/Desktop/SD-jogo1/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/831397/Desktop/SD-jogo1/vga_sync.vhd Line: 7
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst3"
 Warning (12125): Using design file video_pll.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: video_pll-SYN File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/video_pll.vhd Line: 48
-    Info (12023): Found entity 1: video_PLL File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/video_pll.vhd Line: 39
-Info (12128): Elaborating entity "video_PLL" for hierarchy "VGA_SYNC:inst3|video_PLL:video_PLL_inst" File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/vga_sync.vhd Line: 45
-Info (12128): Elaborating entity "altpll" for hierarchy "VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component" File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/video_pll.vhd Line: 86
-Info (12130): Elaborated megafunction instantiation "VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component" File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/video_pll.vhd Line: 86
-Info (12133): Instantiated megafunction "VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component" with the following parameter: File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/video_pll.vhd Line: 86
+    Info (12022): Found design unit 1: video_pll-SYN File: C:/Users/831397/Desktop/SD-jogo1/video_pll.vhd Line: 48
+    Info (12023): Found entity 1: video_PLL File: C:/Users/831397/Desktop/SD-jogo1/video_pll.vhd Line: 39
+Info (12128): Elaborating entity "video_PLL" for hierarchy "VGA_SYNC:inst3|video_PLL:video_PLL_inst" File: C:/Users/831397/Desktop/SD-jogo1/vga_sync.vhd Line: 45
+Info (12128): Elaborating entity "altpll" for hierarchy "VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component" File: C:/Users/831397/Desktop/SD-jogo1/video_pll.vhd Line: 86
+Info (12130): Elaborated megafunction instantiation "VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component" File: C:/Users/831397/Desktop/SD-jogo1/video_pll.vhd Line: 86
+Info (12133): Instantiated megafunction "VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component" with the following parameter: File: C:/Users/831397/Desktop/SD-jogo1/video_pll.vhd Line: 86
     Info (12134): Parameter "clk0_duty_cycle" = "50"
     Info (12134): Parameter "lpm_type" = "altpll"
     Info (12134): Parameter "clk0_multiply_by" = "1"
@@ -707,31 +790,32 @@ Info (12133): Instantiated megafunction "VGA_SYNC:inst3|video_PLL:video_PLL_inst
     Info (12134): Parameter "compensate_clock" = "CLK0"
     Info (12134): Parameter "clk0_phase_shift" = "0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altpll_80u.tdf
-    Info (12023): Found entity 1: altpll_80u File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/db/altpll_80u.tdf Line: 26
+    Info (12023): Found entity 1: altpll_80u File: C:/Users/831397/Desktop/SD-jogo1/db/altpll_80u.tdf Line: 26
 Info (12128): Elaborating entity "altpll_80u" for hierarchy "VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_80u:auto_generated" File: c:/intelfpga/23.1std/quartus/libraries/megafunctions/altpll.tdf Line: 898
+Warning (12125): Using design file vga_display.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: vga_display File: C:/Users/831397/Desktop/SD-jogo1/vga_display.v Line: 1
 Info (12128): Elaborating entity "vga_display" for hierarchy "vga_display:inst4"
-Info (10264): Verilog HDL Case Statement information at vga_display.v(56): all case item expressions in this case statement are onehot File: C:/Users/811164/Desktop/vga_display.v Line: 56
+Info (10264): Verilog HDL Case Statement information at vga_display.v(56): all case item expressions in this case statement are onehot File: C:/Users/831397/Desktop/SD-jogo1/vga_display.v Line: 56
 Warning (12125): Using design file hashgame.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: hashgame File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/hashgame.v Line: 1
+    Info (12023): Found entity 1: hashgame File: C:/Users/831397/Desktop/SD-jogo1/hashgame.v Line: 1
 Info (12128): Elaborating entity "hashgame" for hierarchy "hashgame:inst"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_G[7]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Error: REFCLK port on the PLL is not properly connected on instance VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1.  The reference clock port on the PLL should always be connected.  If there is no reference clock, the PLL will not function correctly. File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/db/altpll_80u.tdf Line: 34
+    Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
+Warning: RST port on the PLL is not properly connected on instance VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/831397/Desktop/SD-jogo1/db/altpll_80u.tdf Line: 34
     Info: Must be connected
-Warning: RST port on the PLL is not properly connected on instance VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/db/altpll_80u.tdf Line: 34
-    Info: Must be connected
-Error: REFCLK port on the PLL is not properly connected on instance VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1.  The reference clock port on the PLL should always be connected.  If there is no reference clock, the PLL will not function correctly. File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/db/altpll_80u.tdf Line: 34
-    Info: Must be connected
-Warning: RST port on the PLL is not properly connected on instance VGA_SYNC:inst3|video_PLL:video_PLL_inst|altpll:altpll_component|altpll_80u:auto_generated|generic_pll1. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: C:/Users/811164/Downloads/SD-tictactoe-main/SD-tictactoe-main/db/altpll_80u.tdf Line: 34
-    Info: Must be connected
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 8 warnings
-    Error: Peak virtual memory: 4905 megabytes
-    Error: Processing ended: Tue Dec  3 10:48:47 2024
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:08
+Info (21057): Implemented 185 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 8 input pins
+    Info (21059): Implemented 19 output pins
+    Info (21061): Implemented 157 logic cells
+    Info (21065): Implemented 1 PLLs
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4917 megabytes
+    Info: Processing ended: Thu Dec  5 11:30:40 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:09
 
 
